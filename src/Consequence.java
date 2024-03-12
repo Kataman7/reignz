@@ -1,17 +1,14 @@
 import java.util.ArrayList;
 
 public class Consequence {
-    private String description;
-    private int economie;
-    private int religion;
-    private int militaire;
-    private int population;
+    private Balance balance;
     private int poid;
     private ArrayList<Carte> cartes;
 
-    public void appliquer(Jeu jeu) {
-        jeu.setEconomie(jeu.getEconomie() + this.economie);
-        jeu.setReligion(jeu.getReligion() + this.religion);
-        jeu.set
+    public Consequence (Balance balance, int poid, ArrayList<Carte> cartes) {
+        this.balance = balance;
+        this.poid = poid;
+        this.cartes = cartes;
     }
+
 }
