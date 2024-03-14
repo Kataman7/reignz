@@ -25,20 +25,20 @@ public class Jeu {
             System.out.println(carte);
         }
 
+        System.out.println(carte.getChoixDroite());
+        System.out.println(carte.getChoixGauche());
+
         Scanner scan = new Scanner(System.in);
         System.out.print("Choisissez un nombre entre 1 et 2: ");
         int réponse = scan.nextInt();
         scan.close();
 
-        Carte
+        Consequence consequence;
+        if (réponse == 1) consequence = carte.getChoixDroite().getConsequence();
+        else consequence = carte.getChoixGauche().getConsequence();
 
-        if (réponse == 1) {
-            carte.getChoixDroite().getConsequence().appliquer(this.balance, this.cartesSuivante);
-        }
-        else {
-            carte.getChoixGauche().getConsequence().appliquer(this.balance);
-        }
-
-
+        consequence.appliquer(this.balance, this.cartesSuivante);
     }
+
+
 }

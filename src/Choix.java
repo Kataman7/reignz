@@ -10,4 +10,9 @@ public class Choix {
     public Consequence getConsequence() {
         return consequence;
     }
+
+    @Override
+    public String toString() {
+        return this.description;
+    }
 }
