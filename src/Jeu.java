@@ -40,5 +40,7 @@ public class Jeu {
         consequence.appliquer(this.balance, this.cartesSuivante);
     }
 
+    public void jouer
+
 
 }
