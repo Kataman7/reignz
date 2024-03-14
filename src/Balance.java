@@ -43,11 +43,16 @@ public class Balance {
         this.population += balance.getPopulation();
     }
 
-    public boolean estDésiquilibré() {
-        if (this.economie > 11 || this.economie < 0) return true;
+    public boolean estEquilibré() {
+        if (this.economie > 11 || this.economie < 0) return false;
         if (this.militaire > 11 || this.militaire < 0) return false;
         if (this.religion > 11 || this.religion < 0) return false;
         if (this.population > 11 || this.population < 0) return false;
         return true;
+    }
+
+    @Override
+    public String toString() {
+        return "["+this.economie+","+this.militaire+","+this.religion+","+this.population+"]";
     }
 }

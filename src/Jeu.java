@@ -8,4 +8,7 @@ public class Jeu {
         this.balance = balance;
     }
 
+    public Balance getBalance() {
+        return balance;
+    }
 }

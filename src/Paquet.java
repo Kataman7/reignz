@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Paquet {
 
@@ -6,7 +7,14 @@ public class Paquet {
     private int poid;
 
     public Paquet(ArrayList<Carte> cartes) {
-        this.cartes = cartes;
+        this.cartes.addAll(cartes);
+    }
+    public Paquet(Carte[] cartes) {
+        this.cartes.addAll(Arrays.asList(cartes));
+    }
+
+    public ArrayList<Carte> getCartes() {
+        return cartes;
     }
 
     public int poidMax() {
@@ -30,4 +38,7 @@ public class Paquet {
         return this.cartes.get(i);
     }
 
+    public int getPoid() {
+        return poid;
+    }
 }

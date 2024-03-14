@@ -13,6 +13,10 @@ public class Carte {
         this.image = image;
     }
 
+    public void setPoid(int poid) {
+        this.poid = poid;
+    }
+
     public Choix getChoixDroite() {
         return choixDroite;
     }
