@@ -7,4 +7,7 @@ public class Choix {
         this.consequence = consequence;
     }
 
+    public Consequence getConsequence() {
+        return consequence;
+    }
 }

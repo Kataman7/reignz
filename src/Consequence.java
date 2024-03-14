@@ -7,7 +7,6 @@ public class Consequence {
 
     public Consequence (Balance balance, int poid, Paquet cartes) {
         this.balance = balance;
-        this.poid = poid;
         this.cartes = cartes;
     }
 
