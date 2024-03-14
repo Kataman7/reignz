@@ -4,6 +4,7 @@ public class Balance {
     private int religion;
     private int militaire;
     private int population;
+    private int science;
 
     // 11 est le max, 6 est le centre.
     public Balance() {
@@ -11,13 +12,15 @@ public class Balance {
         this.religion = 6;
         this.militaire = 6;
         this.population = 6;
+        this.science = 6;
     }
 
-    public Balance(int economie, int religion, int militaire, int population) {
+    public Balance(int economie, int religion, int militaire, int population, int science) {
         this.economie = economie;
         this.religion = religion;
         this.militaire = militaire;
         this.population = population;
+        this.science = science;
     }
 
     public int getEconomie() {
@@ -44,15 +47,17 @@ public class Balance {
     }
 
     public boolean estEquilibré() {
-        if (this.economie > 11 || this.economie < 0) return false;
-        if (this.militaire > 11 || this.militaire < 0) return false;
-        if (this.religion > 11 || this.religion < 0) return false;
-        if (this.population > 11 || this.population < 0) return false;
+        int max = 20;
+        if (this.economie > max || this.economie < 0) return false;
+        if (this.militaire > max || this.militaire < 0) return false;
+        if (this.religion > max || this.religion < 0) return false;
+        if (this.population > max || this.population < 0) return false;
+        if (this.science > max || this.science < 0) return false;
         return true;
     }
 
     @Override
     public String toString() {
-        return "["+this.economie+","+this.militaire+","+this.religion+","+this.population+"]";
+        return "["+this.economie+","+this.militaire+","+this.religion+","+this.population+","+this.science+"]";
     }
 }
