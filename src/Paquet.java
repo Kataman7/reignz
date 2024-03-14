@@ -6,6 +6,10 @@ public class Paquet {
     private ArrayList<Carte> cartes = new ArrayList<>();
     private int poid;
 
+    public Paquet() {
+        this.poid = 0;
+    }
+
     public Paquet(ArrayList<Carte> cartes) {
         this.cartes.addAll(cartes);
     }
@@ -40,5 +44,9 @@ public class Paquet {
 
     public int getPoid() {
         return poid;
+    }
+
+    public void ajouterCartes(Paquet paquet) {
+        this.cartes.addAll(paquet.getCartes());
     }
 }

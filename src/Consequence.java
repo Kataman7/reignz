@@ -11,16 +11,9 @@ public class Consequence {
         this.cartes = cartes;
     }
 
-    public void appliquer(Balance balance) {
-
+    public void appliquer(Balance balance, Paquet paquet) {
         balance.additionner(this.balance);
-
-        if (this.cartes != null && this.cartes.getPoid() > 0) {
-            for(Carte carte : this.cartes.getCartes()) {
-                carte.setPoid(carte.getPoid() + this.poid);
-            }
-        }
-
+        paquet.ajouterCartes(this.cartes);
     }
 
 }
