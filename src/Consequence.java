@@ -13,5 +13,4 @@ public class Consequence {
         balance.additionner(this.balance);
         paquet.ajouterCartes(this.cartes);
     }
-
 }
