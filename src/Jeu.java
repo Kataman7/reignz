@@ -18,6 +18,7 @@ public class Jeu {
         Carte carte;
         if (this.cartesSuivante.getPoid() > 0) {
             carte = this.cartesSuivante.piocher();
+            this.cartesSuivante.retirerUneCarte(carte);
             System.out.println(carte);
         }
         else {

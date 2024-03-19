@@ -14,7 +14,10 @@ public class Paquet {
         this.cartes.addAll(cartes);
     }
     public Paquet(Carte[] cartes) {
-        this.cartes.addAll(Arrays.asList(cartes));
+        for (Carte carte: cartes) {
+            this.cartes.add(carte);
+            this.poid += carte.getPoid();
+        }
     }
 
     public ArrayList<Carte> getCartes() {
@@ -48,5 +51,9 @@ public class Paquet {
 
     public void ajouterCartes(Paquet paquet) {
         this.cartes.addAll(paquet.getCartes());
+    }
+
+    public void retirerUneCarte(Carte carte) {
+        this.cartes.remove(carte);
     }
 }

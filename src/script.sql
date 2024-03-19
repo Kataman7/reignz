@@ -50,6 +50,7 @@ CREATE TABLE appartenance
 
 CREATE TABLE jeu
 (
+    id            INT AUTO_INCREMENT PRIMARY KEY,
     balance       INT,
     pioche        INT,
     carteSuivante INT,
@@ -57,3 +58,14 @@ CREATE TABLE jeu
     FOREIGN KEY (pioche) REFERENCES paquet (id),
     FOREIGN KEY (carteSuivante) REFERENCES paquet (id)
 );
+
+CREATE TABLE utilisateur
+(
+    id  INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(50),
+    mdp VARCHAR(50),
+    jeu int,
+    FOREIGN KEY (jeu) REFERENCES jeu (id)
+
+)
+
