@@ -66,6 +66,5 @@ CREATE TABLE utilisateur
     mdp VARCHAR(50),
     jeu int,
     FOREIGN KEY (jeu) REFERENCES jeu (id)
-
 )
 
