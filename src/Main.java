@@ -2,6 +2,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        /*
         Balance balance1 = new Balance(1, 1, 1, 1, 1);
         Consequence conséquence1 = new Consequence(balance1, null);
         Choix choix1 = new Choix("Vous déclinez l'offre.", conséquence1);
@@ -21,6 +22,13 @@ public class Main {
         //conséquence1.appliquer(jeu.getBalance());
         System.out.println(jeu.getBalance());
         System.out.println(jeu.getBalance().estEquilibré());
+         */
+
+        Utilisateur bob = new Utilisateur("bob", "m7Qh!18b7");
+        BaseDonnée db = new BaseDonnée("reignz", "jdbc:mysql://picokeebs.fr:3306/", bob);
+        db.connection();
+        db.requête("test");
+
     }
 
 }
